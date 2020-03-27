@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -36,6 +37,12 @@ public class PlayerController : MonoBehaviour
     float checkRadius;
     [SerializeField]
     LayerMask whatIsGround;
+
+    [SerializeField]
+    Sprite damagedChair;
+
+    bool hasKeyToLift= false;
+    bool closeLift = false;
 
     private void Start()
     {
@@ -177,6 +184,25 @@ public class PlayerController : MonoBehaviour
             health++;
             collision.gameObject.SetActive(false);
         }
+        else if (collision.CompareTag("Key"))
+        {
+            hasKeyToLift = true;
+            collision.gameObject.SetActive(false);
+        }else if (collision.CompareTag("Lift"))
+        {
+            if (hasKeyToLift)
+            {
+                collision.GetComponent<Animator>().SetBool("Open", true);
+                StartCoroutine(GotoNextLevel());
+            }
+        }
+    }
+
+    IEnumerator GotoNextLevel()
+    {
+        yield return new WaitForSeconds(0.5f);
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        closeLift = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -188,6 +214,26 @@ public class PlayerController : MonoBehaviour
             {
                 GameManager.Instance.IsPlayerDead();
             }
+            collision.collider.GetComponent<SpriteRenderer>().sprite = damagedChair;
+            collision.collider.GetComponent<BoxCollider2D>().enabled = false;
         }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Lift"))
+        {
+            if (closeLift)
+            {
+                collision.GetComponent<Animator>().SetBool("Open", false);
+                StartCoroutine(LoadNextStage());
+            }
+        }
+    }
+
+    IEnumerator LoadNextStage()
+    {
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(2);
     }
 }

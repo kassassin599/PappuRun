@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - Wash
   - Health
+  - Wall
+  - Key
+  - Lift
   layers:
   - Default
   - TransparentFX

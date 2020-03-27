@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{FBFA1489-D80F-52F7-2F1A-1BFDC59C9302}</ProjectGuid>
+    <ProjectGuid>{3C15394B-41C8-F821-EAB6-099FA3B3FB91}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Sirenix.OdinInspector.CompatibilityLayer.Editor</AssemblyName>
@@ -73,16 +73,16 @@
     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\VectorIntDrawers.cs" />
     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Scripts\Editor\VectorIntPropertyResolvers.cs" />
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Projects/Match3-2D/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Projects/Match3-2D/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>D:/Projects/Match3-2D/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>D:/Projects/Match3-2D/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity Engine/2019.3.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -280,25 +280,25 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>D:/Projects/Match3-2D/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>D:/Projects/Match3-2D/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>D:/Projects/Match3-2D/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization">
-      <HintPath>D:/Projects/Match3-2D/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Utilities">
-      <HintPath>D:/Projects/Match3-2D/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>D:/Projects/Match3-2D/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>D:/Projects/Match3-2D/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/Unity Engine/2019.3.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

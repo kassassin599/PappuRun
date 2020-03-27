@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{BE79B382-5E46-966A-923B-B48E0D3E657F}</ProjectGuid>
+    <ProjectGuid>{F4F11CDC-F0D2-3A72-5217-7CCA0435C01C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Sirenix.OdinInspector.CompatibilityLayer</AssemblyName>
@@ -66,10 +66,10 @@
     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Scripts\SerializedNetworkBehaviour.cs" />
     <Compile Include="Assets\Plugins\Sirenix\Odin Inspector\Scripts\VectorIntFormatters.cs" />
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Projects/Match3-2D/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Projects/Match3-2D/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Unity Engine/2019.3.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -261,22 +261,22 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>D:/Projects/Match3-2D/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>D:/Projects/Match3-2D/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>D:/Projects/Match3-2D/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Serialization">
-      <HintPath>D:/Projects/Match3-2D/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Utilities">
-      <HintPath>D:/Projects/Match3-2D/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
     </Reference>
     <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>D:/Projects/Match3-2D/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
+      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/Unity Engine/2019.3.1f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
