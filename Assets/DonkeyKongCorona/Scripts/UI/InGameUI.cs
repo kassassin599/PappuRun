@@ -9,6 +9,12 @@ public class InGameUI : MonoBehaviour
     [SerializeField]
     GameObject gameOverUI;
 
+    [SerializeField]
+    public GameObject _actionButton;
+
+    [SerializeField]
+    public GameObject _damageEffect;
+
     private void Start()
     {
         GameManager.OnPlayerDead += OnPlayerDead;
@@ -24,11 +30,19 @@ public class InGameUI : MonoBehaviour
 
     public void MainMenuButton()
     {
+        PlayerPrefs.SetInt("Health", 3);
+        PlayerPrefs.SetInt("Hearts", 3);
         SceneManager.LoadScene(0);
     }
 
     public void QuitButton()
     {
         Application.Quit();
+    }
+
+    public void WashStationActionButton()
+    {
+        FindObjectOfType<PlayerController>()._actionButtonPressed = true;
+        FindObjectOfType<PlayerController>().WashHands();
     }
 }

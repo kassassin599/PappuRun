@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public delegate void PlayerDead();
     public static event PlayerDead OnPlayerDead;
 
+    public delegate void Action(int action);
+    public static event Action OnAction;
+
 
     private static GameManager instance;
 
@@ -46,6 +49,17 @@ public class GameManager : MonoBehaviour
     public void IsPlayerDead()
     {
         OnPlayerDead();
+    }
+
+    public void ActiveActionButton(int actionObject)
+    {
+        OnAction(actionObject);
+    }
+
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt("Health", 3);
+        PlayerPrefs.SetInt("Hearts", 3);
     }
 }
 
