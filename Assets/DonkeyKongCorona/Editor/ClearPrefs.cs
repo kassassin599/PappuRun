@@ -11,5 +11,6 @@ public class ClearPrefs : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("Health");
         PlayerPrefs.DeleteKey("Hearts");
+        PlayerPrefs.DeleteKey("levelAt");
     }
 }

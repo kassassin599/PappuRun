@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8547113391244041887}
   - component: {fileID: 8547113391244041886}
   - component: {fileID: 8547113391244041885}
+  - component: {fileID: 811017847470640934}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -196,7 +197,10 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  jumpTime: 0
+  secondJumpAvail: 0
   damagedChair: {fileID: 21300000, guid: 4571fee5579353548a723088209a8da4, type: 3}
+  _hasKeyToLift: 0
   _actionButtonPressed: 0
 --- !u!95 &8547113391244041885
 Animator:
@@ -217,3 +221,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &811017847470640934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8547113391244041875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33508a35db732aa429cb16e9848c0468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeTakenDuringLerp: 1

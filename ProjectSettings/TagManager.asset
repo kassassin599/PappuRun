@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - Key
   - Lift
+  - Platform
   layers:
   - Default
   - TransparentFX

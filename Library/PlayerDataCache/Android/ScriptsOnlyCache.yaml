@@ -7,12 +7,15 @@ ScriptsOnlyBuild:
     - FollowPlayer
     - GameManager
     - InGameUI
+    - LevelSelection
     - MainMenuUi
+    - MoveCameraUp
     - ObjectInteractable
     - PlayerController
     - RotateY
+    DOTween.dll:
+    - DG.Tweening.Core.DOTweenSettings
     Sirenix.OdinInspector.Editor.dll:
-    - Sirenix.OdinInspector.Editor.GeneralDrawerConfig
     - Sirenix.OdinInspector.Editor.ImportSettingsConfig
     - Sirenix.OdinInspector.Editor.InspectorConfig
     - Sirenix.Serialization.AOTGenerationConfig
@@ -36,8 +39,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -50,6 +55,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
@@ -81,33 +87,33 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11236}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11442}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 11628}
+      Script: {instanceID: 11654}
     - Class: 114
-      Script: {instanceID: 11910}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 12332}
+      Script: {instanceID: 12388}
     - Class: 114
-      Script: {instanceID: 12532}
+      Script: {instanceID: 12590}
     - Class: 114
-      Script: {instanceID: 12650}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12932}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 13324}
     - Class: 114
-      Script: {instanceID: 13268}
+      Script: {instanceID: 13348}
     - Class: 114
-      Script: {instanceID: 13300}
+      Script: {instanceID: 13380}
     - Class: 114
-      Script: {instanceID: 13340}
+      Script: {instanceID: 13420}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -148,33 +154,39 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11236}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 11386}
+      Script: {instanceID: 11408}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 11910}
+      Script: {instanceID: 11550}
     - Class: 114
-      Script: {instanceID: 11936}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 12332}
+      Script: {instanceID: 11972}
     - Class: 114
-      Script: {instanceID: 12650}
+      Script: {instanceID: 12282}
     - Class: 114
-      Script: {instanceID: 12666}
+      Script: {instanceID: 12388}
     - Class: 114
-      Script: {instanceID: 12786}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12724}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 12848}
     - Class: 114
-      Script: {instanceID: 13114}
+      Script: {instanceID: 12932}
     - Class: 114
-      Script: {instanceID: 13340}
+      Script: {instanceID: 12964}
     - Class: 114
-      Script: {instanceID: 13384}
+      Script: {instanceID: 13018}
+    - Class: 114
+      Script: {instanceID: 13194}
+    - Class: 114
+      Script: {instanceID: 13420}
+    - Class: 114
+      Script: {instanceID: 13466}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -223,41 +235,45 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11236}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11442}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11544}
     - Class: 114
-      Script: {instanceID: 11910}
+      Script: {instanceID: 11654}
     - Class: 114
-      Script: {instanceID: 12332}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 12532}
+      Script: {instanceID: 11984}
     - Class: 114
-      Script: {instanceID: 12650}
+      Script: {instanceID: 12388}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12590}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 13054}
+      Script: {instanceID: 12932}
     - Class: 114
-      Script: {instanceID: 13222}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 13132}
     - Class: 114
-      Script: {instanceID: 13256}
+      Script: {instanceID: 13302}
     - Class: 114
-      Script: {instanceID: 13268}
+      Script: {instanceID: 13324}
     - Class: 114
-      Script: {instanceID: 13300}
+      Script: {instanceID: 13336}
     - Class: 114
-      Script: {instanceID: 13340}
+      Script: {instanceID: 13348}
     - Class: 114
-      Script: {instanceID: 13404}
+      Script: {instanceID: 13380}
+    - Class: 114
+      Script: {instanceID: 13420}
+    - Class: 114
+      Script: {instanceID: 13486}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -310,39 +326,43 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11236}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11442}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11544}
     - Class: 114
-      Script: {instanceID: 11910}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 12332}
+      Script: {instanceID: 11984}
     - Class: 114
-      Script: {instanceID: 12532}
+      Script: {instanceID: 12388}
     - Class: 114
-      Script: {instanceID: 12650}
+      Script: {instanceID: 12590}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 12932}
     - Class: 114
-      Script: {instanceID: 13222}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 13132}
     - Class: 114
-      Script: {instanceID: 13256}
+      Script: {instanceID: 13302}
     - Class: 114
-      Script: {instanceID: 13268}
+      Script: {instanceID: 13324}
     - Class: 114
-      Script: {instanceID: 13300}
+      Script: {instanceID: 13336}
     - Class: 114
-      Script: {instanceID: 13340}
+      Script: {instanceID: 13348}
     - Class: 114
-      Script: {instanceID: 13404}
+      Script: {instanceID: 13380}
+    - Class: 114
+      Script: {instanceID: 13420}
+    - Class: 114
+      Script: {instanceID: 13486}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -360,6 +380,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 331
       Script: {instanceID: 0}
     Assets/DonkeyKongCorona/Scene/CoronaOffice 3.unity:
     - Class: 1
@@ -393,39 +415,41 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11236}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11442}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11484}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11544}
     - Class: 114
-      Script: {instanceID: 11628}
+      Script: {instanceID: 11654}
     - Class: 114
-      Script: {instanceID: 11910}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 12332}
+      Script: {instanceID: 11984}
     - Class: 114
-      Script: {instanceID: 12532}
+      Script: {instanceID: 12388}
     - Class: 114
-      Script: {instanceID: 12650}
+      Script: {instanceID: 12590}
     - Class: 114
-      Script: {instanceID: 12868}
+      Script: {instanceID: 12708}
     - Class: 114
-      Script: {instanceID: 12944}
+      Script: {instanceID: 12932}
     - Class: 114
-      Script: {instanceID: 13222}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 13302}
     - Class: 114
-      Script: {instanceID: 13256}
+      Script: {instanceID: 13324}
     - Class: 114
-      Script: {instanceID: 13268}
+      Script: {instanceID: 13336}
     - Class: 114
-      Script: {instanceID: 13300}
+      Script: {instanceID: 13348}
     - Class: 114
-      Script: {instanceID: 13340}
+      Script: {instanceID: 13380}
+    - Class: 114
+      Script: {instanceID: 13420}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -687,6 +711,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: 4a533f2fe69789a0a01cddb8bdcf24ec
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveCameraUp
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -711,6 +741,12 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
+      Hash: b5fc3843e35dd6d09a719cb0d10ff4a5
+    assemblyName: DemiLib.dll
+    namespaceName: DG.DemiLib.External
+    className: DeHierarchyComponent
+  - hash:
+      serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -727,6 +763,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 704dcd31abc789439bc3f3cd10b58c2b
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 9a65634b0f2713c6c2d2dd4d09159a88
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenSettings
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1029,6 +1077,24 @@ ScriptsOnlyBuild:
     className: RotateSample
   - hash:
       serializedVersion: 2
+      Hash: 4c33041797f7e8fa2c00d8b442cebc85
+    assemblyName: DOTweenPro.dll
+    namespaceName: DG.Tweening
+    className: DOTweenPath
+  - hash:
+      serializedVersion: 2
+      Hash: d452b4ce4b4cca771c54091cc2623c68
+    assemblyName: DOTweenPro.dll
+    namespaceName: DG.Tweening
+    className: DOTweenVisualManager
+  - hash:
+      serializedVersion: 2
+      Hash: 54bfe1c81dc376b05c38a2e0a5ff5506
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelSelection
+  - hash:
+      serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1057,6 +1123,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 450cab4c9d2f461e4647e7d66d4d559c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DG.Tweening
+    className: DOTweenAnimation
   - hash:
       serializedVersion: 2
       Hash: d791aa6007fa3640be1164ea75bb087d

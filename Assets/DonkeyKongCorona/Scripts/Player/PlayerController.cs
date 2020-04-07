@@ -76,36 +76,7 @@ public class PlayerController : MonoBehaviour
     {
         UpdateHealthUI();
 
-        //if (!isPoweringUp)
-        //{
-            //if (goLeft)
-            //{
-            //    transform.Translate(Vector3.right * Time.deltaTime * speed);
-            //    playerAnimator.SetBool("Run", true);
-            //}
-            //else if (goRight)
-            //{
-            //    transform.Translate(Vector3.right * Time.deltaTime * speed);
-            //    playerAnimator.SetBool("Run", true);
-            //}
-            //else
-            //{
-            //    playerAnimator.SetBool("Run", false);
-            //}
-        //}
-
-        //if (isJumping)
-        //{
-        //    jumpTimeCounter -= Time.deltaTime;
-            
-        //}
-
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
-
-        //if (isJumping)
-        //{
-        //    transform.Translate(Vector3.up * Time.deltaTime * uchalneKiTikat);
-        //}
 
 #if UNITY_EDITOR
         if (Input.GetKey(KeyCode.RightArrow))
@@ -193,47 +164,17 @@ public class PlayerController : MonoBehaviour
         goRight = false;
     }
 
-    public void JumpButtonDown()
-    {
-        isJumping = true;
-    }
-
-    public void JumpButtonUp()
-    {
-        isJumping = false;
-    }
-
-    //public void JumpPowerUp()
-    //{
-    //    playerAnimator.SetBool("JumpPower", true);
-    //    isPoweringUp = true;
-
-    //    jumpTimeCounter = jumpTime;
-    //    isJumping = true;
-
-        
-    //}
-
     public void JumpPlayer()
     {
 
         if (isGrounded)
         {
-            //if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-            //{
             rigidbody2D.AddForce(Vector2.up * uchalneKiTikat, ForceMode2D.Impulse);
             secondJumpAvail = true;
-            //GetComponent<Collider2D>().enabled = false;
-            //GetComponent<AudioSource>().Play();
             playerAnimator.SetTrigger("Jump");
-            //}
-            //StartCoroutine(cameraShake.Shake(0.05f, 0.05f));
-
         }
         else
         {
-            //if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-            //{
             if (secondJumpAvail)
             {
                 rigidbody2D.AddForce(Vector2.up * uchalneKiTikat, ForceMode2D.Impulse);
@@ -241,31 +182,7 @@ public class PlayerController : MonoBehaviour
                 //GetComponent<AudioSource>().Play();
                 //bheemAnimator.SetTrigger("Jump");
             }
-            //}
         }
-        //if (isGrounded && isJumping)
-        //{
-        //    playerAnimator.SetBool("JumpPower", false);
-        //    isPoweringUp = false;
-        //    if (jumpTimeCounter<0)
-        //    {
-        //        print(uchalneKiTikat);
-        //        rigidbody2D.velocity = Vector2.up * uchalneKiTikat;
-        //    }
-        //    else
-        //    {
-        //        uchalneKiTikat = 10;
-        //        rigidbody2D.velocity = Vector2.up * uchalneKiTikat;
-        //    }
-        //    playerAnimator.SetTrigger("Jump");
-
-        //    isJumping = false;
-        //    uchalneKiTikat = 15;
-        //}
-        //else
-        //{
-        //    isJumping = false;
-        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -316,7 +233,7 @@ public class PlayerController : MonoBehaviour
     IEnumerator GotoNextLevel()
     {
         yield return new WaitForSeconds(0.5f);
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        
         closeLift = true;
     }
 
@@ -336,10 +253,22 @@ public class PlayerController : MonoBehaviour
             collision.collider.GetComponent<SpriteRenderer>().sprite = damagedChair;
             collision.collider.GetComponent<BoxCollider2D>().enabled = false;
         }
+        else if (collision.collider.CompareTag("Platform"))
+        {
+            //Vector3 camPos = FindObjectOfType<Camera>().transform.position;
+            //FindObjectOfType<Camera>().transform.position = new Vector3(camPos.x, transform.position.y + 2, camPos.z);
+            GetComponent<MoveCameraUp>().StartLerping();
+        }
+        else if (collision.collider.CompareTag("Wall"))
+        {
+            playerAnimator.Play("Idle");
+        }
     }
 
     IEnumerator PlayerDead()
     {
+        FindObjectOfType<InGameUI>()._damageEffect.GetComponent<Animator>().Play("DeathEffect");
+        GetComponent<PlayerController>().enabled = false;
         yield return new WaitForSeconds(3f);
         GameManager.Instance.IsPlayerDead();
     }
@@ -350,6 +279,8 @@ public class PlayerController : MonoBehaviour
         {
             if (closeLift)
             {
+                GetComponent<PlayerController>().enabled = false;
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
                 collision.GetComponent<Animator>().SetBool("Open", false);
                 StartCoroutine(LoadNextStage());
             }
@@ -373,6 +304,7 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator LoadNextStage()
     {
+        PlayerPrefs.SetInt("levelAt", SceneManager.GetActiveScene().buildIndex + 1);
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
@@ -382,6 +314,29 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Wash"))
         {
             FindObjectOfType<InGameUI>()._actionButton.SetActive(false);
+        }
+    }
+
+    public void MarioDeath()
+    {
+        rigidbody2D.AddForce(Vector2.up * uchalneKiTikat, ForceMode2D.Impulse);
+        GetComponent<BoxCollider2D>().enabled = false;
+        FindObjectOfType<CameraFollow>().enabled = false;
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Wall"))
+        {
+            playerAnimator.Play("Idle");
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Wall"))
+        {
+            playerAnimator.Play("Idle");
         }
     }
 }
