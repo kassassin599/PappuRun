@@ -19,13 +19,13 @@ EditorBuildSettings:
     guid: 8b0169a2cff6c434f903319d6c24b5ce
   - enabled: 1
     path: Assets/DonkeyKongCorona/Scene/CoronaOffice 3.unity
-    guid: c0023c0d44854a042af56aa0b5aa2110
+    guid: 2750a290424af9c41bdba972f22de9c8
   - enabled: 1
     path: Assets/DonkeyKongCorona/Scene/CoronaOffice 4.unity
-    guid: 9cb866867572ed343ba78e5a945b83e1
+    guid: b0e091cc1546b2940a0efbf1f44348ce
   - enabled: 1
-    path: Assets/DonkeyKongCorona/Scene/CoronaOffice 5.unity
-    guid: 49994a4235e159c4fa43a8652ccc0d62
+    path: Assets/DonkeyKongCorona/Scene/CoronaOffice 6.unity
+    guid: 373e20ceed272d040b9f037537bbafe9
   - enabled: 1
     path: Assets/DonkeyKongCorona/Scene/CoronaMain.unity
     guid: 97505795c70d9e74cacb5726ac59bc9a
