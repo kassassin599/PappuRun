@@ -52,6 +52,9 @@ public class PlayerController : MonoBehaviour
 
     public bool _actionButtonPressed = false;
 
+    [SerializeField]
+    GameObject deathImage;
+
     private void Start()
     {
         if (PlayerPrefs.HasKey("Health") && PlayerPrefs.HasKey("Hearts"))
@@ -267,7 +270,8 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator PlayerDead()
     {
-        FindObjectOfType<InGameUI>()._damageEffect.GetComponent<Animator>().Play("DeathEffect");
+        //FindObjectOfType<InGameUI>()._damageEffect.GetComponent<Animator>().Play("DeathEffect");
+        deathImage.SetActive(true);
         GetComponent<PlayerController>().enabled = false;
         yield return new WaitForSeconds(3f);
         GameManager.Instance.IsPlayerDead();

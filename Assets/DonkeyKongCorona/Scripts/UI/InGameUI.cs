@@ -32,6 +32,7 @@ public class InGameUI : MonoBehaviour
     {
         PlayerPrefs.SetInt("Health", 3);
         PlayerPrefs.SetInt("Hearts", 3);
+        PlayerPrefs.SetInt("levelAt", SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene(0);
     }
 

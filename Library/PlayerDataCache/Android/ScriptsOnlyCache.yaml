@@ -16,6 +16,7 @@ ScriptsOnlyBuild:
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
     Sirenix.OdinInspector.Editor.dll:
+    - Sirenix.OdinInspector.Editor.GeneralDrawerConfig
     - Sirenix.OdinInspector.Editor.ImportSettingsConfig
     - Sirenix.OdinInspector.Editor.InspectorConfig
     - Sirenix.Serialization.AOTGenerationConfig
@@ -282,6 +283,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 210
+      Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
@@ -423,8 +426,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11544}
     - Class: 114
-      Script: {instanceID: 11654}
-    - Class: 114
       Script: {instanceID: 11946}
     - Class: 114
       Script: {instanceID: 11984}
@@ -439,6 +440,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13018}
     - Class: 114
+      Script: {instanceID: 13132}
+    - Class: 114
       Script: {instanceID: 13302}
     - Class: 114
       Script: {instanceID: 13324}
@@ -450,6 +453,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13380}
     - Class: 114
       Script: {instanceID: 13420}
+    - Class: 114
+      Script: {instanceID: 13486}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -467,6 +472,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 331
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1185,7 +1192,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 494bc104aa838f5dfb1a4ef98cf4ef8c
+      Hash: 3d24cc18f5a6b79455ad9a242e0a1b4d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController

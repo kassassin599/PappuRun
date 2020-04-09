@@ -2290,12 +2290,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1763878898}
-        m_MethodName: 
+      - m_Target: {fileID: 1763878899}
+        m_MethodName: FourthLevelLoad
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3645,6 +3645,7 @@ GameObject:
   - component: {fileID: 1763878901}
   - component: {fileID: 1763878900}
   - component: {fileID: 1763878899}
+  - component: {fileID: 1763878904}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3745,6 +3746,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1763878904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763878898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecb8f20cd0a9eee44b96dcdc5259103a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvlButtons:
+  - {fileID: 1559089027}
+  - {fileID: 393255664}
+  - {fileID: 1979236858}
+  - {fileID: 1185874299}
+  - {fileID: 1915133158}
+  - {fileID: 42849201}
+  - {fileID: 2123769961}
+  - {fileID: 1713494518}
+  - {fileID: 1138889580}
+  - {fileID: 1616659272}
 --- !u!1 &1797255596
 GameObject:
   m_ObjectHideFlags: 0
@@ -3755,7 +3779,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1797255598}
   - component: {fileID: 1797255597}
-  - component: {fileID: 1797255599}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3789,29 +3812,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1797255599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1797255596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecb8f20cd0a9eee44b96dcdc5259103a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lvlButtons:
-  - {fileID: 1559089027}
-  - {fileID: 393255664}
-  - {fileID: 1979236858}
-  - {fileID: 1185874299}
-  - {fileID: 1915133158}
-  - {fileID: 42849201}
-  - {fileID: 2123769961}
-  - {fileID: 1713494518}
-  - {fileID: 1138889580}
-  - {fileID: 1616659272}
 --- !u!1 &1799592546
 GameObject:
   m_ObjectHideFlags: 0
@@ -4086,12 +4086,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1763878898}
-        m_MethodName: 
+      - m_Target: {fileID: 1763878899}
+        m_MethodName: FifthLevelLoad
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
