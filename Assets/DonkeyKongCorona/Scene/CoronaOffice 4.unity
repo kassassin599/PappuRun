@@ -2326,7 +2326,7 @@ MonoBehaviour:
   rightLimit: {fileID: 1144141089}
   followObject: {fileID: 8547113391387820136}
   followOffset: {x: 5.07, y: 2.25}
-  speed: 6
+  speed: 5
 --- !u!1001 &1673421752
 PrefabInstance:
   m_ObjectHideFlags: 0

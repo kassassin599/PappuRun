@@ -1984,7 +1984,7 @@ MonoBehaviour:
   rightLimit: {fileID: 720944000}
   followObject: {fileID: 182926314}
   followOffset: {x: 5.07, y: 2.25}
-  speed: 6
+  speed: 5
 --- !u!4 &1666424340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5944504680596861630, guid: 7e502f993339fb846be5eb2be786e887,

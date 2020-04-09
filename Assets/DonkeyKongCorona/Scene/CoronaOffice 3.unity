@@ -2107,7 +2107,7 @@ MonoBehaviour:
   rightLimit: {fileID: 1144141089}
   followObject: {fileID: 8547113391387820136}
   followOffset: {x: 5.07, y: 2.25}
-  speed: 6
+  speed: 5
 --- !u!1001 &1678090656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2920,12 +2920,12 @@ PrefabInstance:
     - target: {fileID: 8547113391244041873, guid: e8ecdf0fb745f5c4e8283f2e3fd707d9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6
+      value: 6.2
       objectReference: {fileID: 0}
     - target: {fileID: 8547113391244041873, guid: e8ecdf0fb745f5c4e8283f2e3fd707d9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.05
+      value: 9.4
       objectReference: {fileID: 0}
     - target: {fileID: 8547113391244041873, guid: e8ecdf0fb745f5c4e8283f2e3fd707d9,
         type: 3}

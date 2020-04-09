@@ -333,8 +333,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11544}
     - Class: 114
-      Script: {instanceID: 11654}
-    - Class: 114
       Script: {instanceID: 11946}
     - Class: 114
       Script: {instanceID: 11984}
@@ -564,7 +562,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 331
       Script: {instanceID: 0}
-    Assets/DonkeyKongCorona/Scene/CoronaOffice 5.unity:
+    Assets/DonkeyKongCorona/Scene/CoronaOffice 6.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -1461,6 +1459,6 @@ ScriptsOnlyBuild:
   - Assets/DonkeyKongCorona/Scene/CoronaOffice 2.unity
   - Assets/DonkeyKongCorona/Scene/CoronaOffice 3.unity
   - Assets/DonkeyKongCorona/Scene/CoronaOffice 4.unity
-  - Assets/DonkeyKongCorona/Scene/CoronaOffice 5.unity
+  - Assets/DonkeyKongCorona/Scene/CoronaOffice 6.unity
   - Assets/DonkeyKongCorona/Scene/CoronaMain.unity
   playerPath: D:/Projects/Match3-2D/Builds/Android/DonkeyKongCorona.apk

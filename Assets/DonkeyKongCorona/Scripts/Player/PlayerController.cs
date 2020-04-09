@@ -260,7 +260,7 @@ public class PlayerController : MonoBehaviour
         {
             //Vector3 camPos = FindObjectOfType<Camera>().transform.position;
             //FindObjectOfType<Camera>().transform.position = new Vector3(camPos.x, transform.position.y + 2, camPos.z);
-            GetComponent<MoveCameraUp>().StartLerping();
+            //GetComponent<MoveCameraUp>().StartLerping();
         }
         else if (collision.collider.CompareTag("Wall"))
         {
