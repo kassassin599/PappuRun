@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/DonkeyKongCorona/Scene/CoronaOffice 4.unity
     guid: b0e091cc1546b2940a0efbf1f44348ce
   - enabled: 1
+    path: Assets/DonkeyKongCorona/Scene/CoronaOffice 5.unity
+    guid: b08566db7433e1a4d8d95ecd61a20f0a
+  - enabled: 1
     path: Assets/DonkeyKongCorona/Scene/CoronaOffice 6.unity
     guid: 373e20ceed272d040b9f037537bbafe9
   - enabled: 1

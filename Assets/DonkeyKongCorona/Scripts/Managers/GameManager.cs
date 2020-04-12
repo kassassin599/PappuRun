@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 
     public delegate void PlayerDead();
     public static event PlayerDead OnPlayerDead;
+    
+    public delegate void MaskPicked();
+    public static event MaskPicked OnMaskPicked;
 
     public delegate void Action(int action);
     public static event Action OnAction;
@@ -49,6 +52,11 @@ public class GameManager : MonoBehaviour
     public void IsPlayerDead()
     {
         OnPlayerDead();
+    }
+
+    public void PlayerPickedMask()
+    {
+        OnMaskPicked();
     }
 
     public void ActiveActionButton(int actionObject)

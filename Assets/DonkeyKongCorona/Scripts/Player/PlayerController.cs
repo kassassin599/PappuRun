@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rigidbody2D;
 
     bool goRight = false;
-    bool goLeft = false;
+    public bool goLeft = false;
     //bool isJumping = false;
     bool isPoweringUp = false;
 
@@ -54,6 +54,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     GameObject deathImage;
+
+    public int numOfMask = 0;
 
     private void Start()
     {
@@ -210,6 +212,17 @@ public class PlayerController : MonoBehaviour
             //PlayerPrefs.SetInt("Hearts", numOfHearts);
             //collision.GetComponent<BoxCollider2D>().enabled = false;
         }
+        else if (collision.CompareTag("CoronaEnemy"))
+        {
+            health--;
+            FindObjectOfType<InGameUI>()._damageEffect.GetComponent<Animator>().Play("DamageEffect");
+            PlayerPrefs.SetInt("Health", health);
+            if (health <= 0)
+            {
+                playerAnimator.SetBool("IsDead", true);
+                StartCoroutine(PlayerDead());
+            }
+        }
         else if (collision.CompareTag("Health"))
         {
             if (health<numOfHearts)
@@ -223,13 +236,20 @@ public class PlayerController : MonoBehaviour
         {
             _hasKeyToLift = true;
             collision.gameObject.SetActive(false);
-        }else if (collision.CompareTag("Lift"))
+        }
+        else if (collision.CompareTag("Lift"))
         {
             if (_hasKeyToLift)
             {
                 collision.GetComponent<Animator>().SetBool("Open", true);
                 StartCoroutine(GotoNextLevel());
             }
+        }
+        else if (collision.CompareTag("Mask"))
+        {
+            numOfMask += 1;
+            GameManager.Instance.PlayerPickedMask();
+            collision.gameObject.SetActive(false);
         }
     }
 

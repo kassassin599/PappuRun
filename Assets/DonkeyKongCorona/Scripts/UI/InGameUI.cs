@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class InGameUI : MonoBehaviour
 {
@@ -15,9 +16,30 @@ public class InGameUI : MonoBehaviour
     [SerializeField]
     public GameObject _damageEffect;
 
+    [SerializeField]
+    GameObject maskImage;
+    [SerializeField]
+    GameObject numOfMaskText;
+
     private void Start()
     {
         GameManager.OnPlayerDead += OnPlayerDead;
+        GameManager.OnMaskPicked += OnMaskPicked;
+
+        if (FindObjectOfType<EnemyAI>())
+        {
+            //Do nothing
+        }
+        else
+        {
+            maskImage.SetActive(false);
+            numOfMaskText.SetActive(false);
+        }
+    }
+
+    private void OnMaskPicked()
+    {
+        numOfMaskText.GetComponent<TextMeshProUGUI>().text = "X" + FindObjectOfType<PlayerController>().numOfMask;
     }
 
     private void OnPlayerDead()

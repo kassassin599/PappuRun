@@ -11,6 +11,8 @@ TagManager:
   - Key
   - Lift
   - Platform
+  - Mask
+  - CoronaEnemy
   layers:
   - Default
   - TransparentFX
@@ -21,7 +23,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - CoronaEnemy
   - 
   - 
   - 
