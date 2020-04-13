@@ -3,6 +3,8 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraFollow
     - Cloud
+    - DG.Tweening.DOTweenAnimation
+    - DetectEnemy
     - EnemyAI
     - FollowPlayer
     - GameManager
@@ -40,8 +42,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -112,7 +116,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13380}
     - Class: 114
-      Script: {instanceID: 13420}
+      Script: {instanceID: 13422}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -146,7 +150,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -183,9 +193,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13194}
     - Class: 114
-      Script: {instanceID: 13420}
+      Script: {instanceID: 13422}
     - Class: 114
-      Script: {instanceID: 13466}
+      Script: {instanceID: 13468}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -268,9 +278,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13380}
     - Class: 114
-      Script: {instanceID: 13420}
+      Script: {instanceID: 13422}
     - Class: 114
-      Script: {instanceID: 13486}
+      Script: {instanceID: 13488}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -359,9 +369,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13380}
     - Class: 114
-      Script: {instanceID: 13420}
+      Script: {instanceID: 13422}
     - Class: 114
-      Script: {instanceID: 13486}
+      Script: {instanceID: 13488}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -450,9 +460,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13380}
     - Class: 114
-      Script: {instanceID: 13420}
+      Script: {instanceID: 13422}
     - Class: 114
-      Script: {instanceID: 13486}
+      Script: {instanceID: 13488}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -529,6 +539,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13132}
     - Class: 114
+      Script: {instanceID: 13190}
+    - Class: 114
       Script: {instanceID: 13302}
     - Class: 114
       Script: {instanceID: 13324}
@@ -539,9 +551,102 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13380}
     - Class: 114
-      Script: {instanceID: 13420}
+      Script: {instanceID: 13422}
     - Class: 114
-      Script: {instanceID: 13486}
+      Script: {instanceID: 13488}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 331
+      Script: {instanceID: 0}
+    Assets/DonkeyKongCorona/Scene/CoronaOffice 5.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11250}
+    - Class: 114
+      Script: {instanceID: 11442}
+    - Class: 114
+      Script: {instanceID: 11484}
+    - Class: 114
+      Script: {instanceID: 11544}
+    - Class: 114
+      Script: {instanceID: 11654}
+    - Class: 114
+      Script: {instanceID: 11946}
+    - Class: 114
+      Script: {instanceID: 11984}
+    - Class: 114
+      Script: {instanceID: 12388}
+    - Class: 114
+      Script: {instanceID: 12590}
+    - Class: 114
+      Script: {instanceID: 12708}
+    - Class: 114
+      Script: {instanceID: 12932}
+    - Class: 114
+      Script: {instanceID: 13018}
+    - Class: 114
+      Script: {instanceID: 13132}
+    - Class: 114
+      Script: {instanceID: 13190}
+    - Class: 114
+      Script: {instanceID: 13302}
+    - Class: 114
+      Script: {instanceID: 13324}
+    - Class: 114
+      Script: {instanceID: 13336}
+    - Class: 114
+      Script: {instanceID: 13348}
+    - Class: 114
+      Script: {instanceID: 13380}
+    - Class: 114
+      Script: {instanceID: 13422}
+    - Class: 114
+      Script: {instanceID: 13488}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -618,6 +723,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13018}
     - Class: 114
+      Script: {instanceID: 13132}
+    - Class: 114
       Script: {instanceID: 13302}
     - Class: 114
       Script: {instanceID: 13324}
@@ -628,7 +735,100 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13380}
     - Class: 114
-      Script: {instanceID: 13420}
+      Script: {instanceID: 13404}
+    - Class: 114
+      Script: {instanceID: 13422}
+    - Class: 114
+      Script: {instanceID: 13488}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 331
+      Script: {instanceID: 0}
+    Assets/DonkeyKongCorona/Scene/CoronaOffice 8.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11250}
+    - Class: 114
+      Script: {instanceID: 11442}
+    - Class: 114
+      Script: {instanceID: 11484}
+    - Class: 114
+      Script: {instanceID: 11544}
+    - Class: 114
+      Script: {instanceID: 11654}
+    - Class: 114
+      Script: {instanceID: 11946}
+    - Class: 114
+      Script: {instanceID: 11984}
+    - Class: 114
+      Script: {instanceID: 12388}
+    - Class: 114
+      Script: {instanceID: 12590}
+    - Class: 114
+      Script: {instanceID: 12708}
+    - Class: 114
+      Script: {instanceID: 12932}
+    - Class: 114
+      Script: {instanceID: 13018}
+    - Class: 114
+      Script: {instanceID: 13190}
+    - Class: 114
+      Script: {instanceID: 13302}
+    - Class: 114
+      Script: {instanceID: 13324}
+    - Class: 114
+      Script: {instanceID: 13336}
+    - Class: 114
+      Script: {instanceID: 13348}
+    - Class: 114
+      Script: {instanceID: 13380}
+    - Class: 114
+      Script: {instanceID: 13422}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -806,7 +1006,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: b7634d4cbffff17c933fd8a773b5a29e
+      Hash: cf4f5baf4a8c2b9a4dccdb97e8cf992a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyAI
@@ -1004,7 +1204,7 @@ ScriptsOnlyBuild:
     className: SlowMoButton
   - hash:
       serializedVersion: 2
-      Hash: 61cf8eb4d0563bf3c9f65e642976994b
+      Hash: 917c2f11ac96427015a12d918c603cce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InGameUI
@@ -1232,7 +1432,7 @@ ScriptsOnlyBuild:
     className: MenuSceneLoader
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: fd879fec499f33f0a8751f28ab2918f6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenuUi
@@ -1364,7 +1564,7 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
-      Hash: 3d24cc18f5a6b79455ad9a242e0a1b4d
+      Hash: d1a9b2febb6d50346e13b06928a97fb2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1392,6 +1592,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DetectEnemy
   - hash:
       serializedVersion: 2
       Hash: 4ef0f7d42cdb13479386e1f049c315aa
@@ -1459,6 +1665,8 @@ ScriptsOnlyBuild:
   - Assets/DonkeyKongCorona/Scene/CoronaOffice 2.unity
   - Assets/DonkeyKongCorona/Scene/CoronaOffice 3.unity
   - Assets/DonkeyKongCorona/Scene/CoronaOffice 4.unity
+  - Assets/DonkeyKongCorona/Scene/CoronaOffice 5.unity
   - Assets/DonkeyKongCorona/Scene/CoronaOffice 6.unity
+  - Assets/DonkeyKongCorona/Scene/CoronaOffice 8.unity
   - Assets/DonkeyKongCorona/Scene/CoronaMain.unity
   playerPath: D:/Projects/Match3-2D/Builds/Android/DonkeyKongCorona.apk

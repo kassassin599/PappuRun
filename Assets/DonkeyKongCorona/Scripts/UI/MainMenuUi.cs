@@ -5,6 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuUi : MonoBehaviour
 {
+    [SerializeField]
+    GameObject titleImage;
+
+    private void Start()
+    {
+        titleImage.SetActive(true);
+        StartCoroutine(TitleImage());
+    }
+
+    IEnumerator TitleImage()
+    {
+        yield return new WaitForSeconds(5f);
+        titleImage.SetActive(false);
+    }
+
     public void PlayButton()
     {
         SceneManager.LoadScene(1);

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -55,10 +56,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     GameObject deathImage;
 
+    [SerializeField]
+    LayerMask enemyLayerMask;
+
     public int numOfMask = 0;
+
+    public EnemyAI enemy;
+
+    public event Action OnMaskPickup;
 
     private void Start()
     {
+        Physics2D.queriesStartInColliders = false;
+        
         if (PlayerPrefs.HasKey("Health") && PlayerPrefs.HasKey("Hearts"))
         {
             numOfHearts = PlayerPrefs.GetInt("Hearts");
@@ -81,6 +91,8 @@ public class PlayerController : MonoBehaviour
     {
         UpdateHealthUI();
 
+        RayUpdate();
+
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
 #if UNITY_EDITOR
@@ -98,6 +110,35 @@ public class PlayerController : MonoBehaviour
             transform.Translate(Vector3.up * Time.deltaTime * uchalneKiTikat);
         }
 #endif
+    }
+
+    private void RayUpdate()
+    {
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, 10, enemyLayerMask);
+        if (hitInfo.collider != null)
+        {
+            Debug.DrawLine(transform.position, hitInfo.point, Color.red);
+            if (numOfMask>0)
+            {
+                FindObjectOfType<InGameUI>()._maskActionButton.SetActive(true);
+            }
+            enemy = hitInfo.collider.GetComponent<EnemyAI>();
+        }
+        else
+        {
+            Debug.DrawLine(transform.position, transform.position + transform.right * 10, Color.green);
+            FindObjectOfType<InGameUI>()._maskActionButton.SetActive(false);
+            enemy = null;
+        }
+    }
+
+    public void MaskActionButtonPressed()
+    {
+        numOfMask--;
+        if (enemy!=null)
+        {
+            enemy.MaskOn();
+        }
     }
 
     private void FixedUpdate()
@@ -214,13 +255,20 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.CompareTag("CoronaEnemy"))
         {
-            health--;
-            FindObjectOfType<InGameUI>()._damageEffect.GetComponent<Animator>().Play("DamageEffect");
-            PlayerPrefs.SetInt("Health", health);
-            if (health <= 0)
+            if (collision.GetComponent<EnemyAI>()._maskOn)
             {
-                playerAnimator.SetBool("IsDead", true);
-                StartCoroutine(PlayerDead());
+                //Do nothing
+            }
+            else
+            {
+                health--;
+                FindObjectOfType<InGameUI>()._damageEffect.GetComponent<Animator>().Play("DamageEffect");
+                PlayerPrefs.SetInt("Health", health);
+                if (health <= 0)
+                {
+                    playerAnimator.SetBool("IsDead", true);
+                    StartCoroutine(PlayerDead());
+                }
             }
         }
         else if (collision.CompareTag("Health"))
@@ -248,7 +296,11 @@ public class PlayerController : MonoBehaviour
         else if (collision.CompareTag("Mask"))
         {
             numOfMask += 1;
-            GameManager.Instance.PlayerPickedMask();
+            //GameManager.Instance.PlayerPickedMask();
+            if (OnMaskPickup!=null)
+            {
+                OnMaskPickup();
+            }
             collision.gameObject.SetActive(false);
         }
     }

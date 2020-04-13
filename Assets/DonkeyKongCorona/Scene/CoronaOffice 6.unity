@@ -5326,6 +5326,11 @@ PrefabInstance:
       propertyPath: layerMask.m_Bits
       value: 823
       objectReference: {fileID: 0}
+    - target: {fileID: 8547113391244041886, guid: e8ecdf0fb745f5c4e8283f2e3fd707d9,
+        type: 3}
+      propertyPath: enemyLayerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8ecdf0fb745f5c4e8283f2e3fd707d9, type: 3}
 --- !u!1 &8547113391387820136 stripped

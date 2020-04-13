@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4564678812973932151}
   - component: {fileID: 4564678812973932150}
   - component: {fileID: 4564678812973932137}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CoronaEnemy
   m_TagString: CoronaEnemy
   m_Icon: {fileID: 0}

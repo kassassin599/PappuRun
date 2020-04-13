@@ -21,10 +21,21 @@ public class InGameUI : MonoBehaviour
     [SerializeField]
     GameObject numOfMaskText;
 
+    [SerializeField]
+    GameObject titleImage;
+
+    [SerializeField]
+    public GameObject _maskActionButton;
+
+    public PlayerController player;
+
     private void Start()
     {
+        player = FindObjectOfType<PlayerController>();
+
         GameManager.OnPlayerDead += OnPlayerDead;
-        GameManager.OnMaskPicked += OnMaskPicked;
+        //GameManager.OnMaskPicked += OnMaskPicked;
+        player.OnMaskPickup += OnMaskPicked;
 
         if (FindObjectOfType<EnemyAI>())
         {
@@ -35,6 +46,15 @@ public class InGameUI : MonoBehaviour
             maskImage.SetActive(false);
             numOfMaskText.SetActive(false);
         }
+
+        titleImage.SetActive(true);
+        StartCoroutine(TitleImage());
+    }
+
+    IEnumerator TitleImage()
+    {
+        yield return new WaitForSeconds(2f);
+        titleImage.SetActive(false);
     }
 
     private void OnMaskPicked()
@@ -67,5 +87,19 @@ public class InGameUI : MonoBehaviour
     {
         FindObjectOfType<PlayerController>()._actionButtonPressed = true;
         FindObjectOfType<PlayerController>().WashHands();
+    }
+
+    public void MaskActionButton()
+    {
+        player.MaskActionButtonPressed();
+        numOfMaskText.GetComponent<TextMeshProUGUI>().text = "X" + FindObjectOfType<PlayerController>().numOfMask;
+        _maskActionButton.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnPlayerDead -= OnPlayerDead;
+        //GameManager.OnMaskPicked -= OnMaskPicked;
+        player.OnMaskPickup -= OnMaskPicked;
     }
 }

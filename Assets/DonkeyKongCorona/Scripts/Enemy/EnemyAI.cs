@@ -13,6 +13,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField]
     Transform detectChair;
 
+    public bool _maskOn = false;
+
     private void Start()
     {
         StartCoroutine(MoveRight());
@@ -45,5 +47,12 @@ public class EnemyAI : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public void MaskOn()
+    {
+        _maskOn = true;
+
+        GetComponent<Animator>().SetBool("MaskOn", true);
     }
 }
