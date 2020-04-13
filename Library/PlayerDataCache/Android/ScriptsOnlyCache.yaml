@@ -18,7 +18,6 @@ ScriptsOnlyBuild:
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
     Sirenix.OdinInspector.Editor.dll:
-    - Sirenix.OdinInspector.Editor.GeneralDrawerConfig
     - Sirenix.OdinInspector.Editor.ImportSettingsConfig
     - Sirenix.OdinInspector.Editor.InspectorConfig
     - Sirenix.Serialization.AOTGenerationConfig
@@ -1006,7 +1005,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: cf4f5baf4a8c2b9a4dccdb97e8cf992a
+      Hash: c69168999e1597a2801e665e70591999
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyAI

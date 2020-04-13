@@ -100,6 +100,10 @@ MonoBehaviour:
   enemySpeed: 1
   moveRight: 1
   detectChair: {fileID: 4564678813408488525}
+  _maskOn: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!95 &4564678812973932150
 Animator:
   serializedVersion: 3
