@@ -11,7 +11,7 @@ public class MainMenuUi : MonoBehaviour
     private void Start()
     {
         titleImage.SetActive(true);
-        StartCoroutine(TitleImage());
+        //StartCoroutine(TitleImage());
     }
 
     IEnumerator TitleImage()

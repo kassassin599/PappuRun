@@ -96,6 +96,28 @@ public class InGameUI : MonoBehaviour
         _maskActionButton.SetActive(false);
     }
 
+    public void PauseButton()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void ResumeButton()
+    {
+        Time.timeScale = 1;
+    }
+
+    public void HomeButton()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
+    }
+
+    public void RestartLevelButton()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     private void OnDisable()
     {
         GameManager.OnPlayerDead -= OnPlayerDead;

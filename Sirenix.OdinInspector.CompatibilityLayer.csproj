@@ -296,6 +296,9 @@
     <Reference Include="Sirenix.Utilities.Editor">
       <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>D:/Projects/PappuRun/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/Unity Engine/2019.3.1f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
     </Reference>

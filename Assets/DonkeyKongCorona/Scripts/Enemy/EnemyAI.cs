@@ -51,25 +51,6 @@ public class EnemyAI : MonoBehaviour
                 
             }
 
-            //RaycastHit2D frontInfo = Physics2D.Raycast(detectChair.position, Vector2.left, 0.01f);
-            //if (frontInfo.collider == true)
-            //{
-            //    if (/*frontInfo.collider.CompareTag("Enemy") || */frontInfo.collider.CompareTag("Wall"))
-            //    {
-
-            //        if (moveRight == true)
-            //        {
-            //            transform.eulerAngles = new Vector3(0, -180, 0);
-            //            moveRight = false;
-            //        }
-            //        else
-            //        {
-            //            transform.eulerAngles = new Vector3(0, 0, 0);
-            //            moveRight = true;
-            //        }
-            //    }
-            //}
-
             yield return null;
         }
     }

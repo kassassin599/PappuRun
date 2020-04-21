@@ -65,6 +65,13 @@ public class PlayerController : MonoBehaviour
 
     public event Action OnMaskPickup;
 
+    [SerializeField]
+    GameObject mask;
+
+    Vector2 maskDirection;
+
+    bool maskReached = false;
+
     private void Start()
     {
         Physics2D.queriesStartInColliders = false;
@@ -118,11 +125,17 @@ public class PlayerController : MonoBehaviour
         if (hitInfo.collider != null)
         {
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
-            if (numOfMask>0)
+            enemy = hitInfo.collider.GetComponent<EnemyAI>();
+            if (enemy._maskOn)
+            {
+                Debug.DrawLine(transform.position, transform.position + transform.right * 10, Color.green);
+                FindObjectOfType<InGameUI>()._maskActionButton.SetActive(false);
+                //enemy = null;
+            }
+            else if (numOfMask>0 && !enemy._maskOn)
             {
                 FindObjectOfType<InGameUI>()._maskActionButton.SetActive(true);
             }
-            enemy = hitInfo.collider.GetComponent<EnemyAI>();
         }
         else
         {
@@ -135,9 +148,42 @@ public class PlayerController : MonoBehaviour
     public void MaskActionButtonPressed()
     {
         numOfMask--;
+        mask.transform.position = transform.position;
+        mask.SetActive(true);
+        maskDirection = (enemy.transform.position - transform.position).normalized;
+        //print(maskDirection);
+        StartCoroutine(MaskToEnemy());
         if (enemy!=null)
         {
             enemy.MaskOn();
+        }
+    }
+
+    IEnumerator MaskToEnemy()
+    {
+        
+        while (!maskReached)
+        {
+            if (Vector2.Distance(mask.transform.position, enemy.transform.position)>0.2f)
+            {
+                if (maskDirection.x > 0)
+                {
+                    mask.transform.Translate(maskDirection * Time.deltaTime * 10f);
+                }
+                else
+                {
+                    mask.transform.Translate(-maskDirection * Time.deltaTime * 10f);
+                }
+            }
+            else
+            {
+                maskReached = true;
+                print("MAskReached" + maskReached);
+                mask.transform.position = transform.position;
+                mask.SetActive(false);
+            }
+
+            yield return null;
         }
     }
 
@@ -342,11 +388,13 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator PlayerDead()
     {
+        GameManager.Instance.StopBGMusic();
         //FindObjectOfType<InGameUI>()._damageEffect.GetComponent<Animator>().Play("DeathEffect");
         deathImage.SetActive(true);
         GetComponent<PlayerController>().enabled = false;
         yield return new WaitForSeconds(3f);
         GameManager.Instance.IsPlayerDead();
+        GameManager.Instance.ResumeBGMusic();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -393,11 +441,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void DeathPause()
+    {
+        Time.timeScale = 0;
+    }
+
     public void MarioDeath()
     {
         rigidbody2D.AddForce(Vector2.up * uchalneKiTikat, ForceMode2D.Impulse);
         GetComponent<BoxCollider2D>().enabled = false;
         FindObjectOfType<CameraFollow>().enabled = false;
+        Time.timeScale = 1;
     }
 
     private void OnCollisionStay2D(Collision2D collision)

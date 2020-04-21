@@ -315,6 +315,9 @@
     <Reference Include="Sirenix.Utilities.Editor">
       <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>D:/Projects/PappuRun/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>D:/Projects/PappuRun/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>

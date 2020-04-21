@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public delegate void Action(int action);
     public static event Action OnAction;
 
+    [SerializeField]
+    AudioSource bgAudioSource;
 
     private static GameManager instance;
 
@@ -62,6 +64,16 @@ public class GameManager : MonoBehaviour
     public void ActiveActionButton(int actionObject)
     {
         OnAction(actionObject);
+    }
+
+    public void StopBGMusic()
+    {
+        bgAudioSource.Pause();
+    }
+
+    public void ResumeBGMusic()
+    {
+        bgAudioSource.Play();
     }
 
     private void OnApplicationQuit()
