@@ -104,6 +104,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!95 &4564678812973932150
 Animator:
   serializedVersion: 3

@@ -147,6 +147,9 @@ public class PlayerController : MonoBehaviour
 
     public void MaskActionButtonPressed()
     {
+        print("MASK ACTION BUTTON PRESSED");
+        maskReached = false;
+        StopCoroutine(MaskToEnemy());
         numOfMask--;
         mask.transform.position = transform.position;
         mask.SetActive(true);
@@ -363,13 +366,17 @@ public class PlayerController : MonoBehaviour
         if (collision.collider.CompareTag("Enemy"))
         {
             health--;
-            FindObjectOfType<InGameUI>()._damageEffect.GetComponent<Animator>().Play("DamageEffect");
+            
             PlayerPrefs.SetInt("Health", health);
             if (health <= 0)
             {
                 playerAnimator.SetBool("IsDead", true);
                 StartCoroutine(PlayerDead());
-                
+
+            }
+            else
+            {
+                FindObjectOfType<InGameUI>()._damageEffect.GetComponent<Animator>().Play("DamageEffect");
             }
             collision.collider.GetComponent<SpriteRenderer>().sprite = damagedChair;
             collision.collider.GetComponent<BoxCollider2D>().enabled = false;
@@ -390,7 +397,7 @@ public class PlayerController : MonoBehaviour
     {
         GameManager.Instance.StopBGMusic();
         //FindObjectOfType<InGameUI>()._damageEffect.GetComponent<Animator>().Play("DeathEffect");
-        deathImage.SetActive(true);
+        //deathImage.SetActive(true);
         GetComponent<PlayerController>().enabled = false;
         yield return new WaitForSeconds(3f);
         GameManager.Instance.IsPlayerDead();

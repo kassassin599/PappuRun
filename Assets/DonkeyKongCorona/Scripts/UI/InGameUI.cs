@@ -118,6 +118,16 @@ public class InGameUI : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void MusicOn()
+    {
+        GameManager.Instance.ResumeBGMusic();
+    }
+
+    public void MusicOff()
+    {
+        GameManager.Instance.StopBGMusic();
+    }
+
     private void OnDisable()
     {
         GameManager.OnPlayerDead -= OnPlayerDead;

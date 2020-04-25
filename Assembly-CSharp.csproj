@@ -84,12 +84,14 @@
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Managers\LevelSelection.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\BossChat.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\Cloud.cs" />
+    <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\MedicalTeam.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\ObjectInteractable.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\RotateY.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Player\MoveCameraUp.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\UI\InGameUI.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\UI\MainMenuUi.cs" />
+    <Compile Include="Assets\DonkeyKongCorona\Scripts\UI\TitleLevel.cs" />
     <Compile Include="Assets\Match3\Scripts\GameSceneController.cs" />
     <Compile Include="Assets\Match3\Scripts\Piece.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
