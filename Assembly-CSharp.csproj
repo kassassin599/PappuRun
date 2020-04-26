@@ -87,6 +87,7 @@
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\MedicalTeam.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\ObjectInteractable.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\RotateY.cs" />
+    <Compile Include="Assets\DonkeyKongCorona\Scripts\NewGate\BoxController.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Player\MoveCameraUp.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Player\PlayerController.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\UI\InGameUI.cs" />

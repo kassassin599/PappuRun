@@ -27,8 +27,6 @@ public class PlayerController : MonoBehaviour
 
     bool goRight = false;
     public bool goLeft = false;
-    //bool isJumping = false;
-    bool isPoweringUp = false;
 
     Animator playerAnimator;
 
@@ -40,9 +38,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     LayerMask whatIsGround;
 
-    private float jumpTimeCounter;
     public float jumpTime;
-    private bool isJumping;
     public bool secondJumpAvail = false;
 
     [SerializeField]
@@ -72,6 +68,11 @@ public class PlayerController : MonoBehaviour
 
     bool maskReached = false;
 
+    GameObject hud;
+    GameObject boxHud;
+    GameObject boxController;
+    GameObject mainCamera;
+
     private void Start()
     {
         Physics2D.queriesStartInColliders = false;
@@ -92,10 +93,26 @@ public class PlayerController : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
 
         _actionButtonPressed = false;
+
+        hud = GameObject.Find("HUD");
+        boxHud = GameObject.Find("BoxHUD");
+        if (boxHud!=null)
+        {
+            boxHud.SetActive(false);
+        }
+        boxController = GameObject.Find("ControlBox");
+        if (boxController!=null)
+        {
+            boxController.GetComponent<BoxController>().enabled = false;
+        }
+        mainCamera = GameObject.Find("Main Camera");
+
     }
 
     private void Update()
     {
+        InputUpdate();
+
         UpdateHealthUI();
 
         RayUpdate();
@@ -190,7 +207,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void InputUpdate()
     {
         if (goLeft)
         {
@@ -265,6 +282,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded)
         {
             rigidbody2D.AddForce(Vector2.up * uchalneKiTikat, ForceMode2D.Impulse);
+            //rigidbody2D.velocity = new Vector2(0, Mathf.Sqrt(-2.0f * Physics2D.gravity.y * 10f));
             secondJumpAvail = true;
             playerAnimator.SetTrigger("Jump");
         }
@@ -272,7 +290,8 @@ public class PlayerController : MonoBehaviour
         {
             if (secondJumpAvail)
             {
-                rigidbody2D.AddForce(Vector2.up * uchalneKiTikat, ForceMode2D.Impulse);
+                rigidbody2D.AddForce(Vector2.up * ((uchalneKiTikat / 2)+1), ForceMode2D.Impulse);
+                //rigidbody2D.velocity = new Vector2(0, Mathf.Sqrt(-2.0f * Physics2D.gravity.y * 6f));
                 secondJumpAvail = false;
                 //GetComponent<AudioSource>().Play();
                 //bheemAnimator.SetTrigger("Jump");
@@ -352,6 +371,53 @@ public class PlayerController : MonoBehaviour
             }
             collision.gameObject.SetActive(false);
         }
+        else if (collision.CompareTag("Headset"))
+        {
+            if (!inHeadset)
+            {
+                collision.GetComponent<Collider2D>().enabled = false;
+            }
+            else
+            {
+                rigidbody2D.gravityScale = 0;
+                transform.SetParent(collision.transform.GetChild(0).transform);
+                hud.SetActive(false);
+                boxHud.SetActive(true);
+                boxController.GetComponent<BoxController>().UpdateBoxPhysics();
+                mainCamera.GetComponent<CameraFollow>().followObject = boxController;
+                StartCoroutine(HeadsetPos());
+            }
+        }
+    }
+
+    public void PlayerOutHeadsetReset()
+    {
+        rigidbody2D.gravityScale = 3;
+        transform.SetParent(null);
+        hud.SetActive(true);
+        boxHud.SetActive(false);
+        boxController.GetComponent<BoxController>().enabled = false;
+        mainCamera.GetComponent<CameraFollow>().followObject = this.gameObject;
+        inHeadset = false;
+    }
+
+    public bool inHeadset = true;
+
+    IEnumerator HeadsetPos()
+    {
+        while (inHeadset)
+        {
+            if(transform.rotation.y == 1)
+            {
+                transform.localPosition = new Vector2(1, -2.5f);
+            }
+            else
+            {
+                transform.localPosition = new Vector2(-1, -2.5f);
+            }
+            yield return null;
+        }
+        
     }
 
     IEnumerator GotoNextLevel()

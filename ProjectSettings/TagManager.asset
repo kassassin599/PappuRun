@@ -13,6 +13,8 @@ TagManager:
   - Platform
   - Mask
   - CoronaEnemy
+  - Headset
+  - ControlBox
   layers:
   - Default
   - TransparentFX
@@ -26,7 +28,7 @@ TagManager:
   - CoronaEnemy
   - Wall
   - Player
-  - 
+  - PressurePlate
   - 
   - 
   - 
@@ -47,6 +49,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Parallax
+    uniqueID: 2572856623
+    locked: 0
   - name: Background
     uniqueID: 1490218223
     locked: 0

@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10174737}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.64, y: -1.58, z: -10}
+  m_LocalPosition: {x: -17.27, y: -1.58, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1148,7 +1148,7 @@ PrefabInstance:
     - target: {fileID: 1955914846549275732, guid: bffe6c95fe9fd4149a9f3b5e4118ec04,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1955914846549275732, guid: bffe6c95fe9fd4149a9f3b5e4118ec04,
         type: 3}
@@ -1158,7 +1158,7 @@ PrefabInstance:
     - target: {fileID: 1955914846549275732, guid: bffe6c95fe9fd4149a9f3b5e4118ec04,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: JumpPowerUp
+      value: JumpPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 1955914846549275732, guid: bffe6c95fe9fd4149a9f3b5e4118ec04,
         type: 3}
@@ -1169,16 +1169,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 999267842}
+      objectReference: {fileID: 739889792}
     - target: {fileID: 1955914846549275732, guid: bffe6c95fe9fd4149a9f3b5e4118ec04,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: JumpPlayer
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 1955914846549275732, guid: bffe6c95fe9fd4149a9f3b5e4118ec04,
         type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1955914846549275732, guid: bffe6c95fe9fd4149a9f3b5e4118ec04,
         type: 3}
@@ -1874,7 +1874,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144141088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.5, y: -1.58, z: -10}
+  m_LocalPosition: {x: 22.63, y: -1.58, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2065,12 +2065,12 @@ PrefabInstance:
     - target: {fileID: 8565908014589035220, guid: 8d403a5c0f6284442b1c322c47fc3d24,
         type: 3}
       propertyPath: m_Size.x
-      value: 65.72534
+      value: 65.98904
       objectReference: {fileID: 0}
     - target: {fileID: 8565908014589035222, guid: 8d403a5c0f6284442b1c322c47fc3d24,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.28634
+      value: 0.3523
       objectReference: {fileID: 0}
     - target: {fileID: 8565908014589035222, guid: 8d403a5c0f6284442b1c322c47fc3d24,
         type: 3}
@@ -5113,7 +5113,7 @@ PrefabInstance:
     - target: {fileID: 8547113391244041886, guid: e8ecdf0fb745f5c4e8283f2e3fd707d9,
         type: 3}
       propertyPath: uchalneKiTikat
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8547113391244041886, guid: e8ecdf0fb745f5c4e8283f2e3fd707d9,
         type: 3}
