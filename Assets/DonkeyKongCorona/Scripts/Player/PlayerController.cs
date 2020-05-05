@@ -225,8 +225,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    bool isDead = false;
+
     private void UpdateHealthUI()
     {
+        if (health <= 0 && !isDead)
+        {
+            isDead = true;
+            playerAnimator.SetBool("IsDead", true);
+            StartCoroutine(PlayerDead());
+            FindObjectOfType<InGameUI>()._damageEffect.GetComponent<Animator>().Play("DamageEffect");
+            PlayerPrefs.SetInt("Health", health);
+        }
+
         if (health > numOfHearts)
         {
             health = numOfHearts;

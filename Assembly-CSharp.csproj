@@ -63,6 +63,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ConsolePro\ConsoleProDebug.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\ConsoleProRemoteServer.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\FastBitConverter.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\INetEventListener.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NatPunchModule.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetConstants.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetDataReader.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetDataWriter.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetDebug.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetEndPoint.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetManager.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetPacket.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetPacketPool.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetPeer.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetPeerCollection.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetSerializer.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetSocket.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetThread.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NetUtils.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\NtpSyncModule.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\ReliableChannel.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\SequencedChannel.cs" />
+    <Compile Include="Assets\ConsolePro\Remote\LiteNetLib\SimpleChannel.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
@@ -80,12 +103,15 @@
     <Compile Include="Assets\DonkeyKongCorona\Scripts\DialogueSystem\DialogueManager.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\DialogueSystem\DialogueTrigger.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Enemy\EnemyAI.cs" />
+    <Compile Include="Assets\DonkeyKongCorona\Scripts\Enemy\PrinterAI.cs" />
+    <Compile Include="Assets\DonkeyKongCorona\Scripts\Enemy\PrinterBullet.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Managers\LevelSelection.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\BossChat.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\Cloud.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\MedicalTeam.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\ObjectInteractable.cs" />
+    <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\RatAI.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Misc\RotateY.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\NewGate\BoxController.cs" />
     <Compile Include="Assets\DonkeyKongCorona\Scripts\Player\MoveCameraUp.cs" />
@@ -102,29 +128,55 @@
     <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\DemoScene\Scripts\Robot.cs" />
+    <Compile Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\DemoScene\Scripts\ShaderColorAnimator.cs" />
+    <Compile Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\DemoScene\Scripts\ShaderFloatAnimator.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\SpritesPixelLit.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\SpriteVertexLighting.cginc" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\ShaderShared.cginc" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\Noise\ClassicNoise3D.hlsl" />
     <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\ShaderMaths.cginc" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\Noise\Noise3d.cginc" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\SpriteUnlit.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\SpritePixelLighting.cginc" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\Noise\SimplexNoise2D.hlsl" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\Noise\ClassicNoise2D.hlsl" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\SpriteDissolve.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\SimplexNoise3D.hlsl" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CameraNormalsTexture.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\Noise\Noise2d.cginc" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\SpriteLighting.cginc" />
     <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CameraDepthTexture.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\SpritesPixelLitDissolve.shader" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CameraDepthNormalsTexture.shader" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\Noise\SimplexNoise3D.hlsl" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\SpritesUnlit.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\SpritesVertexLit.shader" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\SpriteShadows.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <None Include="Assets\ThirdParty\UnitySpriteShaders\SpriteShaders\CGIncludes\SpriteSpecular.cginc" />
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
       <HintPath>D:/Projects/PappuRun/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
     </Reference>
@@ -364,24 +416,6 @@
     </Reference>
     <Reference Include="DOTweenPro">
       <HintPath>D:/Projects/PappuRun/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.OdinInspector.Attributes">
-      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.OdinInspector.Editor">
-      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Serialization.Config">
-      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Serialization">
-      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Utilities">
-      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
-    </Reference>
-    <Reference Include="Sirenix.Utilities.Editor">
-      <HintPath>D:/Projects/PappuRun/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>D:/Unity Engine/2019.3.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -742,14 +776,6 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{D74368B7-7864-9253-5559-16786E692564}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj">
-      <Project>{3C15394B-41C8-F821-EAB6-099FA3B3FB91}</Project>
-      <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
-      <Project>{F4F11CDC-F0D2-3A72-5217-7CCA0435C01C}</Project>
-      <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
