@@ -1,6 +1,3 @@
-# =============== #
-# Unity generated #
-# =============== #
 [Tt]emp/
 [Oo]bj/
 [Bb]uild
@@ -12,9 +9,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
  
-# ===================================== #
-# Visual Studio / MonoDevelop generated #
-# ===================================== #
 [Ee]xported[Oo]bj/
 .vs/
 /*.userprefs
@@ -30,9 +24,6 @@ sysinfo.txt
 /*.tmp
 /*.svd
  
-# ============ #
-# OS generated #
-# ============ #
 .DS_Store*
 ._*
 .Spotlight-V100
