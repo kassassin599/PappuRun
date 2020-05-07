@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/DonkeyKongCorona/Scene/CoronaOffice 8.unity
+- path: Assets/DonkeyKongCorona/Scene/CoronaOffice 9.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
