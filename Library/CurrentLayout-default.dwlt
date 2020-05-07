@@ -21,7 +21,11 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
+<<<<<<< HEAD
+  m_MinSize: {x: 875, y: 492}
+=======
   m_MinSize: {x: 875, y: 300}
+>>>>>>> origin/subulife
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -44,9 +48,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 1920
+    height: 997
+  m_MinSize: {x: 875, y: 492}
+=======
     width: 1366
     height: 695
   m_MinSize: {x: 875, y: 300}
+>>>>>>> origin/subulife
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -112,12 +122,25 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
+    width: 1920
+    height: 947
+  m_MinSize: {x: 911, y: 442}
+  m_MaxSize: {x: 22006, y: 10021}
+  vertical: 0
+  controlID: 93
+=======
     width: 1366
     height: 645
   m_MinSize: {x: 911, y: 442}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 19
+=======
+  controlID: 175
+>>>>>>> origin/subulife
+>>>>>>> bbf9efa9379579b4b0792bc88aaebd2ef22ca883
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,12 +160,25 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 874
+    height: 947
+  m_MinSize: {x: 201, y: 442}
+  m_MaxSize: {x: 4001, y: 8042}
+  vertical: 1
+  controlID: 19
+=======
     width: 655
     height: 645
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 44
+=======
+  controlID: 119
+>>>>>>> origin/subulife
+>>>>>>> bbf9efa9379579b4b0792bc88aaebd2ef22ca883
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,8 +196,17 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
+    width: 874
+    height: 477
+=======
     width: 655
+<<<<<<< HEAD
     height: 386
+=======
+    height: 325
+>>>>>>> origin/subulife
+>>>>>>> bbf9efa9379579b4b0792bc88aaebd2ef22ca883
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
@@ -187,9 +232,21 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 386
     width: 655
     height: 259
+=======
+<<<<<<< HEAD
+    y: 477
+    width: 874
+    height: 470
+=======
+    y: 325
+    width: 655
+    height: 320
+>>>>>>> origin/subulife
+>>>>>>> bbf9efa9379579b4b0792bc88aaebd2ef22ca883
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -215,10 +272,22 @@ MonoBehaviour:
     serializedVersion: 2
     x: 655
     y: 0
-    width: 202
-    height: 645
+<<<<<<< HEAD
+    width: 231
+    height: 947
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+    width: 202
+    height: 645
+<<<<<<< HEAD
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+=======
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> origin/subulife
+>>>>>>> bbf9efa9379579b4b0792bc88aaebd2ef22ca883
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -267,15 +336,26 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1090
     y: 0
+<<<<<<< HEAD
+    width: 410
+    height: 947
+=======
     width: 276
     height: 645
+>>>>>>> origin/subulife
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
+<<<<<<< HEAD
+  - {fileID: 20}
+  m_Selected: 0
+  m_LastSelected: 1
+=======
   m_Selected: 0
   m_LastSelected: 0
+>>>>>>> origin/subulife
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -314,7 +394,15 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: -1.5704944, y: 2.282072, z: -100.04297}
     speed: 2
+<<<<<<< HEAD
     m_Value: {x: -1.5704944, y: 2.282072, z: -100.04297}
+=======
+<<<<<<< HEAD
+    m_Value: {x: 0.770476, y: 5.811948, z: -16.630333}
+=======
+    m_Value: {x: -4.6264462, y: -0.19736384, z: -74.8319}
+>>>>>>> origin/subulife
+>>>>>>> bbf9efa9379579b4b0792bc88aaebd2ef22ca883
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -366,7 +454,15 @@ MonoBehaviour:
   m_Size:
     m_Target: 14.005556
     speed: 2
+<<<<<<< HEAD
     m_Value: 14.005556
+=======
+<<<<<<< HEAD
+    m_Value: 18.69078
+=======
+    m_Value: 15.785417
+>>>>>>> origin/subulife
+>>>>>>> bbf9efa9379579b4b0792bc88aaebd2ef22ca883
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -679,9 +775,21 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 6efbffff
+=======
+<<<<<<< HEAD
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 5afbffff
+=======
+      m_SelectedIDs: 62880000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 023afeff303efeff9240feff2c44feff284afeff0e54feff8456feffb456feff1e57feff625cfeff0260feff3260feff9c60feffde67feff9a70feff9c70feffa470feff8280feffb280feff2681feff4a81feff0c92feff9a99feffbc9bfeffd49bfeffa2adfeffa6adfeffaab1feff74b6feffa4bafeffdcbefefff2d0feff54d4feff74d4feff6adbfeff96dffeffc2e8feffb2edfeffbafbfeffeafbfeff16fcfeff22fcfeff3400ffff8c07ffff420cffffca15ffff1429ffffa62bffff5e2cffff742cffffae2cffffaa3cffffb648ffff604bffff6c4bffff844bffff944bffff0253ffff2453ffff4e53ffffc055ffff5c56ffff8656ffff8856ffffac5affffc45affffe064ffff4a6effffbc74ffffa87dffff9680ffffbe80ffffc680ffffee80ffffaa84ffffee88ffff1a94ffffec96ffff1c97ffff9897ffff8082000072970000949700007a990000a4990000ec9900003a9b0000649b0000ac9b000030a900004ca9000064a90000feb20000aab500003ab9000066b9000044bd000036c0000064c0000022c8000050c8000066ca000094ca0000e6cf000032d5000068d500001ad60000
+>>>>>>> origin/subulife
+>>>>>>> bbf9efa9379579b4b0792bc88aaebd2ef22ca883
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -755,7 +863,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 32340000
     m_LastClickedID: 13362
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000000400000024000003a40000074400000a840000028420000fc4400000e45000016450000d2470000d4470000d6470000d8470000da470000dc470000de470000e0470000e2470000e4470000e6470000e8470000ea470000ec470000ee470000f0470000f2470000f4470000f6470000f8470000fa470000fc470000fe47000000480000024800000448000006480000084800000a4800000c4800000e48000010480000124800001448000016480000184800001a4800001c4800001e48000020480000224800002448000026480000284800002a4800002c4800002e48000030480000324800003448000036480000384800003a4800003c4800003e48000040480000424800004448000046480000484800004a480000
+=======
+<<<<<<< HEAD
+    m_ExpandedIDs: 0000000030400000324000006a400000a440000056420000f44400000845000012450000e2470000e4470000e6470000e8470000ea470000ec470000ee470000f0470000f2470000f4470000f6470000f8470000fa470000fc470000fe47000000480000024800000448000006480000084800000a4800000c4800000e48000010480000124800001448000016480000184800001a4800001c4800001e48000020480000224800002448000026480000284800002a4800002c4800002e48000030480000324800003448000036480000384800003a4800003c4800003e4800004048000042480000
+=======
+    m_ExpandedIDs: 00000000065e0000a65f0000e45f0000d0640000ee64000086650000fc6e0000b8730000e4750000f0860000fa860000c6870000c8870000ca870000cc870000ce870000d0870000d2870000d4870000d6870000d8870000da870000dc870000de870000e0870000e2870000e4870000e6870000e8870000ea870000ec870000ee870000f0870000f2870000f4870000f6870000f8870000fa870000fc870000fe87000000880000028800000488000006880000088800000a8800000c8800000e88000010880000128800001488000016880000188800001a8800001c8800001e88000020880000
+>>>>>>> origin/subulife
+>>>>>>> bbf9efa9379579b4b0792bc88aaebd2ef22ca883
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -783,7 +899,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 205}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: ffffffff0000000000400000024000003a40000074400000a840000028420000fc4400000e45000016450000d2470000d4470000d6470000d8470000da470000dc470000de470000e0470000e2470000e4470000e6470000e8470000ea470000ec470000ee470000f0470000f2470000f4470000f6470000f8470000fa470000fc470000fe47000000480000024800000448000006480000084800000a4800000c4800000e48000010480000124800001448000016480000184800001a4800001c4800001e48000020480000224800002448000026480000284800002a4800002c4800002e48000030480000324800003448000036480000384800003a4800003c4800003e48000040480000424800004448000046480000484800004a480000
+=======
+<<<<<<< HEAD
+    m_ExpandedIDs: ffffffff0000000030400000324000006a400000a440000056420000f44400000845000012450000e2470000e4470000e6470000e8470000ea470000ec470000ee470000f0470000f2470000f4470000f6470000f8470000fa470000fc470000fe47000000480000024800000448000006480000084800000a4800000c4800000e48000010480000124800001448000016480000184800001a4800001c4800001e48000020480000224800002448000026480000284800002a4800002c4800002e48000030480000324800003448000036480000384800003a4800003c4800003e4800004048000042480000
+=======
+    m_ExpandedIDs: ffffffff00000000065e0000a65f0000e45f0000e8600000d0640000ee64000086650000fc6e0000b8730000e4750000f0860000fa860000c6870000c8870000ca870000cc870000ce870000d0870000d2870000d4870000d6870000d8870000da870000dc870000de870000e0870000e2870000e4870000e6870000ea870000ec870000ee870000f2870000f4870000f6870000f8870000fa870000fc870000fe870000008800000488000006880000088800000a8800000c8800000e8800001288000014880000188800001a8800001c8800001e88000020880000488800004c8800004e8800006c880000788800007a88000096880000a8880000ac880000ae880000b2880000b4880000b6880000ba8800004c8a0000ac8e0000ffffff7f
+>>>>>>> origin/subulife
+>>>>>>> bbf9efa9379579b4b0792bc88aaebd2ef22ca883
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -877,3 +1001,36 @@ MonoBehaviour:
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
+<<<<<<< HEAD
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13854, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Project Settings
+    m_Image: {fileID: 8487775502441791945, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1381
+    y: 73
+    width: 538
+    height: 926
+  m_ViewDataDictionary: {fileID: 0}
+  m_PosLeft: {x: 0, y: 0}
+  m_PosRight: {x: 0, y: 0}
+  m_Scope: 1
+  m_SplitterFlex: 0.22696629
+=======
+>>>>>>> origin/subulife
